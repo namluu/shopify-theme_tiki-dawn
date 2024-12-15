@@ -1,0 +1,36 @@
+<style>
+  .cta {
+    text-align: center;
+  }
+</style>
+
+<div class="cta">
+  <h1>The new {{ collection.title }} is out now!</h1>
+  <p>{{ section.settings.pre-order-title }} - {{ section.settings.pre-order-text }} - {{ collection.title }}</p>
+</div>
+
+{% schema %}
+  {
+    "name": "Call to action",
+    "settings": [
+      {
+        "id": "pre-order-title",
+        "type": "text",
+        "label": "Title",
+        "default": "Pre-order now!"
+      },
+      {
+        "id": "pre-order-text",
+        "type": "textarea",
+        "label": "Text",
+        "default": "Enter text here"
+      }
+    ],
+    "presets": [
+	  {
+	    "name": "Call to Action",
+	    "category": "Promotional"
+	  }
+    ]
+  }
+{% endschema %}
